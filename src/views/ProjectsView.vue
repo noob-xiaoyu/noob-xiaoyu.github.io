@@ -47,7 +47,7 @@ const projectList = ref([
     icon: SteamAccountManager_Icon,
     title: 'SteamAccountManager',
     shortDescription:
-      '一款方便用户在多个 Steam 账号之间进行“一键切换”的效率工具，免去手动输入账号密码的烦恼。',
+      '现代化的 Steam 账号管理桌面应用，支持账号分类、批量操作、自动登录、深色/浅色主题等功能。',
     to: 'projects/SteamAccountManager',
   },
   {

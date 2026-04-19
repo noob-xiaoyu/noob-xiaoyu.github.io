@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import backIcon from '@/components/icons/back-icon.vue'
 import GithubIcon from '@/components/icons/GithubIcon.vue'
-const techStack = ref(['C++','WebView2','VUE','Vite'])
+const techStack = ref(['C++','WebView2','Windows API','JSON','Vue 3','Vite','Element Plus'])
 const links = ref({
   github: 'https://github.com/noob-xiaoyu/SteamAccountManager',
 })
@@ -19,74 +19,66 @@ const links = ref({
       </div>
       <el-divider />
       <div>
-        <h1>✨ 主要功能</h1>
+        <h1>✨ 功能特性</h1>
         <ul>
-          <h2>1,账号集中管理:</h2>
+          <h2>🎯 账号管理</h2>
           <ul>
-            <p>在一个清晰的列表中管理您所有的 Steam 账号信息，包括用户名、密码、昵称、邮箱等。</p>
+            <li><strong>分类管理</strong>：支持主账号、完美账号、5E账号、普通账号四种分类</li>
+            <li><strong>批量操作</strong>：支持批量添加、批量删除、批量编辑</li>
+            <li><strong>状态管理</strong>：账号状态标识（正常、冷却中、封禁、未知）</li>
+            <li><strong>自动恢复</strong>：自动检测并恢复到期冷却账号</li>
+            <li><strong>密码管理</strong>：密码字段加密显示/隐藏，支持复制功能</li>
           </ul>
-          <h2>2,智能排序与高亮:</h2>
+          <h2>🔐 登录功能</h2>
           <ul>
-            <p>自动根据账号状态（正常、冷却中、VAC封禁）进行排序，重要状态一目了然。</p>
-            <p>对处于冷却或封禁状态的账号整行进行颜色高亮，提供强烈的视觉警示。</p>
+            <li><strong>一键登录</strong>：快速切换到指定 Steam 账号</li>
+            <li><strong>自动登录</strong>：自动设置 Windows 注册表实现 Steam 自动登录</li>
+            <li><strong>安全处理</strong>：自动结束 Steam 进程并重新启动</li>
+            <li><strong>兼容性</strong>：支持 Steam 启动参数优化</li>
           </ul>
-          <h2>3,一键安全登录</h2>
+          <h2>🎨 界面体验</h2>
           <ul>
-            <p>自动检测本地 Steam 客户端路径。</p>
-            <p>在登录前检测 Steam 是否已在运行，并提示用户关闭现有进程，确保切换账号成功。</p>
-            <p>
-              通过调用官方 Steam 客户端并传递登录参数来实现登录，**全程不直接处理 Steam Guard
-              验证码**，安全可靠。
-            </p>
+            <li><strong>深色/浅色主题</strong>：支持系统级主题切换</li>
+            <li><strong>自定义窗口</strong>：无边框窗口设计，支持拖拽、缩放</li>
+            <li><strong>响应式布局</strong>：侧边栏可折叠，适配不同屏幕尺寸</li>
+            <li><strong>键盘快捷键</strong>：支持 Ctrl+A、上下键导航、Delete 等快捷键</li>
+            <li><strong>右键菜单</strong>：上下文菜单提供快速操作</li>
           </ul>
-          <h2>4,批量操作</h2>
+          <h2>📊 数据管理</h2>
           <ul>
-            <p>支持通过逗号或特定分隔符（`----`）批量添加账号，兼容多种格式。</p>
-          </ul>
-          <!-- <h2>5,API 集成</h2>
-            <ul>
-              <p>通过 Steam Web API 批量更新所有账号的最新昵称和封禁状态。</p>
-              <p>智能填充功能：当您粘贴包含 API Key 的文本时，程序会自动提取出 32 位的纯净 Key。</p>
-            </ul> -->
-          <h2>5,数据持久化</h2>
-            <ul>
-              <p>所有账号信息都会自动保存在程序根目录的 `.json` 文件中。</p>
-              <ul>
-                <li>
-                  <p>自动保存:</p>
-                  <ul>
-                    <p>关闭程序时，所有更改都会自动静默保存，无需手动操作。</p>
-                  </ul>
-                </li>
-              </ul>
-            </ul>
-          <h2>6,便捷的交互</h2>
-          <ul>
-            <p>支持通过顶部按钮或右键上下文菜单对账号进行更改、登录、删除等操作。</p>
-            <p>点击昵称可直接在浏览器中打开对应的 Steam 社区个人资料页面。</p>
+            <li><strong>本地存储</strong>：账号数据以 JSON 格式存储在本地</li>
+            <li><strong>配置持久化</strong>：主题、侧边栏状态等配置自动保存</li>
+            <li><strong>数据隔离</strong>：不同分类账号数据分开存储</li>
+            <li><strong>备份兼容</strong>：支持旧版本数据格式自动升级</li>
           </ul>
         </ul>
-        <h1>🚀 使用场景</h1>
+        <h1>🚀 快速开始</h1>
+        <h3>环境要求</h3>
         <ul>
-          <h2>1,使用方法</h2>
-          <ul>
-            <p>
-              1. 从<a
-                href="https://github.com/noob-xiaoyu/SteamAccountManager/releases/latest"
-                target="_blank"
-                style="text-decoration: none"
-                >Releases</a
-              >
-              下载最新版本的SteamAccountManager。
-            </p>
-            <p>
-              2. 运行
-              <router-link to="https://github.com/noob-xiaoyu/SteamAccountManager/releases/latest" style="text-decoration: none">
-                SteamAccountManager.exe
-              </router-link>
-              。
-            </p>
-          </ul>
+          <li><strong>操作系统</strong>: Windows 10/11 (64位)</li>
+          <li><strong>运行时</strong>: Microsoft Edge WebView2 Runtime</li>
+          <li><strong>Steam 客户端</strong>: 已安装最新版 Steam</li>
+        </ul>
+        <h3>下载与运行</h3>
+        <ol>
+          <li>
+            <p>从 <a href="https://github.com/noob-xiaoyu/SteamAccountManager/releases/latest" target="_blank">Releases</a> 下载最新版本的 <code>SteamAccountManager.exe</code></p>
+          </li>
+          <li>
+            <p>运行 <code>SteamAccountManager.exe</code>（确保已安装 WebView2 Runtime）</p>
+          </li>
+          <li>
+            <p>使用批量添加功能导入账号数据（格式：<code>用户名----密码</code>）</p>
+          </li>
+          <li>
+            <p>选择账号并点击“登录”按钮进行一键切换</p>
+          </li>
+        </ol>
+        <h3>注意事项</h3>
+        <ul>
+          <li>首次运行需要管理员权限以修改注册表和结束进程</li>
+          <li>账号密码以加密形式存储在本地 JSON 文件中</li>
+          <li>频繁切换账号可能触发 Steam 安全验证</li>
         </ul>
       </div>
       <el-divider />
