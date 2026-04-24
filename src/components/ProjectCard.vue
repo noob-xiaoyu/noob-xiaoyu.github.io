@@ -1,7 +1,6 @@
 <script setup>
-// eslint-disable-next-line no-unused-vars
-const props = defineProps({
-  icon: String,
+defineProps({
+  icon: [String, Object],
   iconComponent: Object,
   title: String,
   description: String,
@@ -17,7 +16,7 @@ const props = defineProps({
           <div class="icon-container">
             <component v-if="iconComponent" :is="iconComponent" class="custom-svg-icon" />
             <el-avatar
-              v-else
+              v-else-if="icon && typeof icon === 'string'"
               :size="52"
               :src="icon"
               shape="square"

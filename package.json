@@ -16,12 +16,9 @@
   "dependencies": {
     "element-plus": "^2.13.0",
     "github-markdown-css": "^5.8.1",
-    "marked": "^17.0.1",
-    "remark": "^15.0.1",
-    "remark-math": "^6.0.0",
+    "oh-my-live2d": "^0.19.3",
     "vue": "^3.5.26",
-    "vue-router": "^4.6.4",
-    "vue3-markdown-it": "^1.0.10"
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
@@ -31,6 +28,7 @@
     "eslint-plugin-vue": "~10.6.2",
     "globals": "^16.5.0",
     "prettier": "3.7.4",
+    "terser": "^5.46.2",
     "vite": "^7.3.0",
     "vite-plugin-vue-devtools": "^8.0.5"
   }

@@ -138,12 +138,26 @@ html {
   transition: opacity 0.5s ease-in-out;
 }
 
+/* 视频加载失败时的备用背景图片 */
+.video-backup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* 视频加载状态 */
 .video-loading {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10000;
   color: var(--main-text-color);
   display: flex;
   align-items: center;
@@ -171,10 +185,10 @@ html {
 
 /* 视频加载错误 */
 .video-error {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 10000;
   color: var(--main-text-color);
   display: flex;
   align-items: center;
@@ -233,22 +247,9 @@ html {
 }
 
 .el-divider {
-  /*
-    方法一 (最佳实践): 覆盖 Element Plus 的颜色变量。
-    我们将 --el-border-color 的值设置为我们自己的主题变量 --border-color。
-    这样，当主题切换时，分割线的颜色也会自动从深色变为浅色。
-  */
   --el-border-color: var(--border-color);
-
-  /*
-    方法二 (直接覆盖): 调整厚度、样式和边距。
-    你可以根据需要取消下面这些行的注释并修改它们的值。
-  */
-  border-top-width: 1px; /* 调整线的厚度，例如 2px */
-  /* border-top-style: dashed; */ /* 将实线改为虚线 */
-  margin: 24px 0; /* 调整上下边距，默认是 24px 0 */
-
-  /* 过渡动画，让颜色变化更平滑 */
+  border-top-width: 1px;
+  margin: 24px 0;
   transition: border-color 0.3s ease;
 }
 
@@ -386,10 +387,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 60px 20px;
+  padding: 12px;
   min-height: 100vh;
   box-sizing: border-box;
-  padding: 12px;
 }
 
 .projects-card,
@@ -403,7 +403,7 @@ html {
   margin-top: 20px;
 }
 
-/* --- 项目/下载卡片 (ProjectCard, DownloadCard) --- */
+/* --- 项目/下载卡片 (ProjectCard) --- */
 .project-card-link,
 .download-card-link {
   text-decoration: none;
@@ -425,6 +425,20 @@ html {
 .java-versions-container .download-card-link {
   width: 100%;
   margin-bottom: 16px;
+}
+
+/* 分组容器 (Clash/Java 等) */
+.clash-group {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.section-label {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--main-text-color);
+  margin-bottom: 16px;
+  padding-left: 4px;
 }
 
 .project-card-link {

@@ -6,10 +6,10 @@ import EverythingIcon from '@/components/icons/EverythingIcon.vue'
 import nullIcon from '@/components/icons/null.vue'
 import IDEAIcon from '@/components/icons/IDEA.vue'
 import msysIcon from '@/components/icons/msys.vue'
-import NeatDMIcon from '@/assets/image/icon/NeatDM.png'
-import ThoriumWinIcon from '@/assets/image/icon/Thorium.png'
-import ClashPartyIcon from '@/assets/image/icon/clash.png'
-import ClashDevIcon from '@/assets/image/icon/clash-dev.png'
+import NeatDMIcon from '@/assets/image/icon/NeatDM.webp'
+import ThoriumWinIcon from '@/assets/image/icon/Thorium.webp'
+import ClashPartyIcon from '@/assets/image/icon/clash.webp'
+import ClashDevIcon from '@/assets/image/icon/clash-dev.webp'
 import javaIcon from '@/assets/image/icon/java.webp'
 import PowerToysIcon from '@/components/icons/PowerToys.vue'
 </script>
@@ -234,56 +234,50 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue'
         </a>
 
         <!-- Clash Party -->
-        <el-card class="project-card" shadow="hover">
-          <div class="download-card-link">
-            <div class="project-card-content">
-              <!-- Clash Party -->
-              <a
-                href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest"
-                target="_blank"
-                style="text-decoration: none"
-              >
-                <el-card class="project-card" shadow="hover">
-                  <div class="project-card-content">
-                    <div class="icon-container">
-                      <img :src="ClashPartyIcon" alt="Clash Party" class="custom-svg-icon" />
-                    </div>
-                    <div class="project-details">
-                      <h3>Clash Party</h3>
-                      <p>基于 Mihomo 的跨平台代理客户端，支持多种代理协议和高级功能</p>
-                    </div>
-                  </div>
-                </el-card>
-              </a>
-              <!-- Clash 官网导航 -->
-              <a
-                href="https://github.com/clashdownload/Clash"
-                target="_blank"
-                style="text-decoration: none"
-              >
-                <el-card class="project-card" shadow="hover">
-                  <div class="project-card-content">
-                    <div class="icon-container">
-                      <img :src="ClashDevIcon" alt="Clash Dev" class="custom-svg-icon" />
-                    </div>
-                    <div class="project-details">
-                      <h3>Clash 官网导航</h3>
-                      <p>Clash 官网各版本 Clash 下载地址及备份下载地址</p>
-                    </div>
-                  </div>
-                </el-card>
-              </a>
-            </div>
-          </div>
-        </el-card>
+        <div class="clash-group">
+          <div class="section-label">Clash</div>
+          <a
+            href="https://github.com/Maplespe/ExplorerBlurMica/releases/latest"
+            target="_blank"
+            class="download-card-link"
+          >
+            <el-card class="project-card" shadow="hover">
+              <div class="project-card-content">
+                <div class="icon-container">
+                  <img :src="ClashPartyIcon" alt="Clash Party" class="custom-svg-icon" />
+                </div>
+                <div class="project-details">
+                  <h3>Clash Party</h3>
+                  <p>基于 Mihomo 的跨平台代理客户端，支持多种代理协议和高级功能</p>
+                </div>
+              </div>
+            </el-card>
+          </a>
+          <!-- Clash 官网导航 -->
+          <a
+            href="https://github.com/clashdownload/Clash"
+            target="_blank"
+            class="download-card-link"
+          >
+            <el-card class="project-card" shadow="hover">
+              <div class="project-card-content">
+                <div class="icon-container">
+                  <img :src="ClashDevIcon" alt="Clash Dev" class="custom-svg-icon" />
+                </div>
+                <div class="project-details">
+                  <h3>Clash 官网导航</h3>
+                  <p>Clash 官网各版本 Clash 下载地址及备份下载地址</p>
+                </div>
+              </div>
+            </el-card>
+          </a>
+        </div>
 
         <el-divider />
 
         <!-- Java -->
-        <el-card class="project-card" shadow="hover">
-          <div style="color: var(--main-text-color); text-align: left">
-            <h1>Java 开发工具包</h1>
-          </div>
+        <div class="clash-group">
+          <div class="section-label">Java 开发工具包</div>
 
           <div class="java-versions-container">
             <!-- JDK 25 -->
@@ -383,7 +377,7 @@ import PowerToysIcon from '@/components/icons/PowerToys.vue'
               </el-card>
             </a>
           </div>
-        </el-card>
+        </div>
       </div>
     </div>
   </div>

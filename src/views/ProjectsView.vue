@@ -4,10 +4,10 @@ import ProjectCard from '@/components/ProjectCard.vue'
 import backIcon from '@/components/icons/back-icon.vue'
 import bIcon from '@/assets/image/icon/svg/b.svg'
 import launcherIcon from '@/assets/image/icon/svg/launcher.svg'
-import yt_dlp_gui_Icon from '@/assets/image/icon/dlp.ico'
-import SteamAccountManager_Icon from '@/assets/image/icon/SteamAccountManager.ico'
-import imguiIcon from '@/assets/image/icon/imgui.png'
-import vsIcon from '@/assets/image/icon/Visual Studio 2022.png'
+import yt_dlp_gui_Icon from '@/assets/image/icon/dlp.webp'
+import SteamAccountManager_Icon from '@/assets/image/icon/SteamAccountManager.webp'
+import imguiIcon from '@/assets/image/icon/imgui.webp'
+import vsIcon from '@/assets/image/icon/Visual Studio 2022.webp'
 
 // 1. 完整项目数据
 const projectList = ref([
@@ -65,7 +65,7 @@ const projectList = ref([
     shortDescription:
       '一个可以在图片和二进制文件之间进行双向转换的工具，用于文件伪装、隐藏和绕过传输限制。',
     links: {
-      github: 'https://github.com/noob-xiaoyu/Imgui-menu',
+      github: 'https://github.com/noob-xiaoyu/ImageBinaryConverter',
     },
     to: 'projects/ImageBinaryConverter',
   },
@@ -92,8 +92,7 @@ const projectList = ref([
 
 <template>
   <div class="projects-container">
-    <!-- v-show="!dialogVisible" 会在弹窗出现时，通过 CSS 隐藏这个列表卡片 -->
-    <div class="info-card projects-card" v-show="!dialogVisible">
+    <div class="info-card projects-card">
       <div class="project-card-header">
         <h1>我的作品</h1>
         <router-link to="/">
@@ -110,7 +109,6 @@ const projectList = ref([
           :title="project.title"
           :description="project.shortDescription"
           :to="project.to"
-          @viewDetails="showProjectDetails(project)"
         />
       </div>
     </div>

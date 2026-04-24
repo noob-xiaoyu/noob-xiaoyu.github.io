@@ -39,19 +39,6 @@ import gmailIcon from '@/components/icons/gmail-icon.vue'
                   >笨蛋小雨喵</el-button
                 >
               </el-col>
-              <el-col :span="8">
-                <el-button
-                  class="action-btn"
-                  size="large"
-                  :icon="qqIcon"
-                  tag="a"
-                  href="https://qm.qq.com/q/vjdbBTU1Vu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style="text-decoration: none"
-                  >群</el-button
-                >
-              </el-col>
             </el-row>
           </div>
         </li>
